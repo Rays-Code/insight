@@ -4,18 +4,17 @@ import { Auth } from '../components/Auth'
 import { useNavigate } from 'react-router-dom'
 
 const Signup = () => {
-  const token = localStorage.getItem("token")
   const navigate = useNavigate()
 
+
   useEffect(() => {
-    if(token){
-      navigate("/blogs")
-      alert("You're already signed up !")
+    const token = localStorage.getItem("token")
+    if (token) {
+      alert("You're already signed up !");
+      navigate("/blogs");
     }
+  }, []);
     
-  }, [])
-
-
 
   return (
     <div className='grid grid-cols-1 lg:grid-cols-2'>
