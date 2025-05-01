@@ -13,7 +13,7 @@ const Signup = () => {
       alert("You're already signed up !")
     }
     
-  })
+  }, [])
 
 
 
