@@ -16,6 +16,9 @@ const Blogs = () => {
 
     useEffect(() => {
         const fetchUsername = async () => {
+            if(!token){
+                navigate("/signin")
+            }else{
             const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/info`,{
                 headers: {
                     Authorization: localStorage.getItem("token")
@@ -23,15 +26,12 @@ const Blogs = () => {
             })
             setUsername(res.data.user.name)
         }
+        }
 
         fetchUsername()
-    }, [])
+    }, [token])
 
 
-
-    if(!token){
-        navigate("/signin")
-    }
 
     if(loading){
         return <div>
