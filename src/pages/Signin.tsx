@@ -13,7 +13,9 @@ const Signin = () => {
         navigate("/blogs")
         alert("You're already signed up !")
       }
-      
+      else{
+        navigate("/signin")
+      }
     })
 
     return (
