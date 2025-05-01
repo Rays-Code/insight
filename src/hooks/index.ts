@@ -34,7 +34,7 @@ export const useBlogs = () => {
 
 export const useBlog = ({id}: {id: string}) => {
     const [loading, setLoading] = useState(true)
-    const [blog, setBlog] = useState<Blog | null>(null)
+    const [blog, setBlog] = useState<Blog>()
 
     useEffect(() => {
         axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/blog/${id}`, {

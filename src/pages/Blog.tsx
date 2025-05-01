@@ -19,7 +19,7 @@ const Blog = () => {
 
   return (  
     <div>
-      <DisplayBlog blog={blog}/> 
+      <DisplayBlog blog={blog! }/> 
     </div>
   )
   
