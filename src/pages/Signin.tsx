@@ -8,9 +8,11 @@ const Signin = () => {
   
     useEffect(() => {
       const token = localStorage.getItem("token")
-      if (token) {
+      if (!token) {
         alert("You're already signed up !");
-        navigate("/blogs");
+        navigate("/signin");
+      } else {
+        navigate("/blogs")
       }
     }, []);
 
