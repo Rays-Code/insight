@@ -11,17 +11,18 @@ const Blog = () => {
     id: id || ""
   })
 
-  if(loading){
+  if(loading || !blog){
     return <div>
       loading...
     </div>
   }
 
-  return (
+  return (  
     <div>
       <DisplayBlog blog={blog}/> 
     </div>
   )
+  
 }
 
 export default Blog
