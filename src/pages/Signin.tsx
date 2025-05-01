@@ -7,12 +7,12 @@ const Signin = () => {
     const navigate = useNavigate()
   
     useEffect(() => {
-      const token = localStorage.getItem("token")
+      const token = localStorage.getItem("token") || ""
       if (!token) {
-        alert("You're already signed up !");
         navigate("/signin");
       } else {
         navigate("/blogs")
+        alert("You're already signed up !");
       }
     }, []);
 
