@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const testimonials = [
   {
@@ -22,6 +22,7 @@ const testimonials = [
 ];
 
 const HomePage = () => {
+    const navigate = useNavigate()
   return (
     <div className="min-h-screen bg-white text-gray-900">
         <div className=' text-2xl font-semibold mt-6 ml-7 flex flex-col justify-center'><Link to={"/blogs"}>Insight Blog</Link></div>
@@ -33,8 +34,10 @@ const HomePage = () => {
           Whether you're here to learn, explore, or be inspired—you're in the right place.
         </p>
         <a
-          href="/signin"
           className="bg-gray-900 text-white px-6 py-2 rounded-md hover:bg-gray-800 transition"
+          onClick={() => {
+            navigate("/signin")
+          }}
         >
           Browse Articles
         </a>
