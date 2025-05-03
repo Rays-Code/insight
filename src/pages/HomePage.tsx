@@ -34,7 +34,7 @@ const HomePage = () => {
           Whether you're here to learn, explore, or be inspired—you're in the right place.
         </p>
         <a
-          className="bg-gray-900 text-white px-6 py-2 rounded-md hover:bg-gray-800 transition"
+          className="bg-gray-900 cursor-pointer text-white px-6 py-2 rounded-md hover:bg-gray-800 transition"
           onClick={() => {
             navigate("/signin")
           }}
