@@ -28,7 +28,7 @@ const Publish = () => {
     <div className="flex flex-col min-h-screen bg-slate-100">
   <Appbar name="Anonymous" />
 
-  <div className="flex-grow flex items-center justify-center ">
+  <div className="flex-grow scale-75 lg:scale-100 flex items-center justify-center ">
     <div className="w-full max-w-screen-md px-4 space-y-4 bg-white px-15 py-6 rounded-lg shadow-md">
     <h1 className='text-lg'>Create a New post</h1>
       <input

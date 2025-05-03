@@ -8,7 +8,7 @@ const DisplayBlog = ({blog} : {blog: Blog}) => {
 
         <div className='flex justify-center mt-10'>
         <div className='grid grid-cols-12 px-10 pt-200 w-full max-w-screen-2xl'>
-        <div className='col-span-8'>
+        <div className='col-span-12 lg:col-span-8'>
             <div className='text-5xl font-extrabold'>
                 {blog.title}
             </div>
@@ -19,7 +19,8 @@ const DisplayBlog = ({blog} : {blog: Blog}) => {
                 {blog.content}
             </div>
         </div>
-        <div className='col-span-4 text-2xl font-extrabold'>
+
+        <div className='col-span-12 lg:col-span-4 mt-10 lg:mt-0 text-2xl font-extrabold'>
             <div className='text-sm font-normal text-base font-bold'>
                 Author
             </div>
