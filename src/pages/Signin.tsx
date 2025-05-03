@@ -17,15 +17,15 @@ const Signin = () => {
     }, []);
 
     return (
-    <div className='grid grid-cols-2'>
-        <div>
+      <div className='grid grid-cols-1 lg:grid-cols-2'>
+      <div>      
         <div className=' text-2xl pt-5 ml-6 font-semibold flex flex-col justify-center'><Link to={"/"}>Insight Blog</Link></div>
-           <Auth type='signin'/>
-        </div>
-        <div className='invisible lg:visible'>
-           <Quote />
-        </div>  
-        </div>
+        <Auth type='signin'/>
+      </div>
+      <div className='hidden lg:block'>
+      <Quote />
+      </div>
+    </div>
     )       
 }
 

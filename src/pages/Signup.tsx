@@ -24,7 +24,7 @@ const Signup = () => {
         <div className=' text-2xl pt-5 ml-6 font-semibold flex flex-col justify-center'><Link to={"/"}>Insight Blog</Link></div>
         <Auth type='signup'/>
       </div>
-      <div className='invisible lg:visible'>
+      <div className='hidden lg:block'>
       <Quote />
       </div>
     </div>

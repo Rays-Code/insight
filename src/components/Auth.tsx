@@ -30,7 +30,7 @@ async function sendRequest(){
 }
 
     return (
-        <div className="h-screen flex justify-center items-center flex-col">
+        <div className="h-screen w-screen flex justify-center items-center flex-col">
             <div>
             <div className="px-10">
             <div className="text-3xl h-50 font-extrabold">
