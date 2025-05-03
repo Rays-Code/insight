@@ -16,8 +16,13 @@ async function sendRequest(){
     try {
         const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/${type === "signup"? "signup": "signin"}`, postInputs)
         const jwt = response.data.jwt
-        localStorage.setItem("token", jwt)
-        navigate("/blogs")  
+        if(!jwt){
+            alert("User doesn't exist")
+        } else{
+            localStorage.setItem("token", jwt)
+            navigate("/blogs") 
+        }
+ 
     } catch (error) {
         alert("Error while signin up")
     }
