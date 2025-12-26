@@ -34,7 +34,7 @@ const BlogCard = ({authorName, title, content, publishedDate, id}: BlogCardProps
 }
 
 function Avator({name}: {name: string}){
-    return <div className="relative inline-flex items-center justify-center w-6 h-6 overflow-hidden bg-gray-300 rounded-full ">
+    return <div className="relative inline-flex items-center justify-center w-6 h-6 overflow-hidden bg-yellow-300 rounded-full ">
         <span className="font-medium text-gray-500">{name[0]}</span>
     </div>
 }
